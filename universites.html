@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universités – CURSUS BF</title>
+  <meta name="description" content="Comparez les universités publiques et privées de Ouagadougou et du Burkina Faso. Filtrez par filière, prix, type et notez vos établissements préférés." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/filters.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ═══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">C</div>
+      <div class="brand-text">
+        <span class="brand-name">CURSUS BF</span>
+        <span class="brand-sub">Guide éducatif</span>
+      </div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link"> Accueil</a></li>
+      <li><a href="universites.html" class="nav-link active"> Universités</a></li>
+      <li><a href="lycees.html" class="nav-link"> Lycées</a></li>
+      <li><a href="colleges.html" class="nav-link"> Collèges</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="contact.html" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Contact
+      </a>
+    </div>
+    <button class="navbar-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="navbar-menu" id="nav-menu">
+    <div class="navbar-menu-inner">
+      <a href="index.html" class="mobile-nav-link"> Accueil</a>
+      <a href="universites.html" class="mobile-nav-link active"> Universités</a>
+      <a href="lycees.html" class="mobile-nav-link"> Lycées</a>
+      <a href="colleges.html" class="mobile-nav-link"> Collèges</a>
+      <a href="contact.html" class="mobile-nav-link btn-whatsapp mobile-wa">Nous contacter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ PAGE ══════════════════════════════════════════════ -->
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- En-tête -->
+    <div class="section-header" style="padding-top:40px; text-align:left; margin-bottom:32px;">
+      <h1>🎓 <span>Universités</span> au Burkina Faso</h1>
+      <p>Comparez les universités, filtrez par filière, prix et type pour trouver l'idéal.</p>
+    </div>
+
+    <!-- Barre de recherche -->
+    <div style="margin-bottom:24px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+      <div class="hero-search" style="flex:1; min-width:260px; max-width:500px; margin:0;">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Université, filière, quartier..." autocomplete="off" />
+        <button class="search-btn" onclick="applyFilters()">Chercher</button>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
+        <label for="sort-by" style="font-size:0.82rem; color:var(--text-muted);">Trier :</label>
+        <select class="filter-select" id="sort-by" style="width:auto;" onchange="applyFilters()">
+          <option value="nom_asc">Nom A-Z</option>
+          <option value="nom_desc">Nom Z-A</option>
+          <option value="prix_asc">Prix croissant</option>
+          <option value="prix_desc">Prix décroissant</option>
+          <option value="note_desc">Mieux notés</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="listings-layout">
+
+      <!-- ══ FILTRES ══ -->
+      <aside>
+        <button class="filter-mobile-toggle" id="filter-mobile-toggle">
+          <span class="toggle-icon">⚙️</span>
+          <span class="toggle-text">Afficher les filtres</span>
+        </button>
+
+        <div class="filter-panel" id="filter-panel">
+          <div class="filter-panel-header">
+            <h2><span class="filter-icon">⚙️</span> Filtres</h2>
+            <button class="btn-reset-filters" id="btn-reset-filters">↺ Réinitialiser</button>
+          </div>
+
+          <!-- Type -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">🏛️</span> Type</p>
+            <select class="filter-select" id="filter-type" onchange="applyFilters()">
+              <option value="tous">Tous les types</option>
+              <option value="public">Public</option>
+              <option value="prive">Privé</option>
+            </select>
+          </div>
+
+          <!-- Localité -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">📍</span> Localité</p>
+            <select class="filter-select" id="filter-localite" onchange="applyFilters()">
+              <option value="toutes">Toutes les villes</option>
+              <option value="Ouagadougou">Ouagadougou</option>
+              <option value="Koudougou">Koudougou</option>
+              <option value="Bobo-Dioulasso">Bobo-Dioulasso</option>
+            </select>
+          </div>
+
+          <!-- Prix -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">💰</span> Budget max / an</p>
+            <div class="price-range-container">
+              <div class="price-display">
+                <span>0 FCFA</span>
+                <span class="price-val" id="prix-value">Tous</span>
+              </div>
+              <input type="range" class="filter-range" id="filter-prix"
+                min="0" max="2000000" step="50000" value="2000000"
+                oninput="FiltersManager.updatePriceDisplay('filter-prix', this.value); applyFilters()" />
+            </div>
+          </div>
+
+          <!-- Filière -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">📚</span> Filière</p>
+            <select class="filter-select" id="filter-filiere" onchange="applyFilters()">
+              <option value="toutes">Toutes les filières</option>
+              <option value="Informatique">Informatique</option>
+              <option value="Droit">Droit</option>
+              <option value="Médecine">Médecine</option>
+              <option value="Gestion">Gestion</option>
+              <option value="Sciences">Sciences</option>
+              <option value="Finance">Finance</option>
+              <option value="Marketing">Marketing</option>
+              <option value="BTS">BTS</option>
+              <option value="Génie">Génie</option>
+              <option value="Lettres">Lettres</option>
+              <option value="STAPS">STAPS</option>
+            </select>
+          </div>
+
+          <!-- Système de notation -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">📋</span> Système de notation</p>
+            <select class="filter-select" id="filter-notation" onchange="applyFilters()">
+              <option value="tous">Tous</option>
+              <option value="LMD">LMD</option>
+              <option value="ECTS / LMD">ECTS / LMD</option>
+            </select>
+          </div>
+
+          <!-- Note minimale -->
+          <div class="filter-group">
+            <p class="filter-group-label"><span class="group-icon">⭐</span> Note minimale</p>
+            <div class="rating-filter-stars">
+              <button class="rating-filter-btn" data-min="1">★ 1+</button>
+              <button class="rating-filter-btn" data-min="2">★ 2+</button>
+              <button class="rating-filter-btn" data-min="3">★ 3+</button>
+              <button class="rating-filter-btn" data-min="4">★ 4+</button>
+              <button class="rating-filter-btn" data-min="5">★ 5</button>
+            </div>
+            <input type="hidden" id="filter-note" value="0" />
+          </div>
+        </div>
+      </aside>
+
+      <!-- ══ CARTES ══ -->
+      <div>
+        <div class="results-info">
+          <p class="results-count" id="results-count"></p>
+        </div>
+        <div class="cards-grid" id="cards-container"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p class="footer-brand">CURSUS BF</p>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="universites.html">Universités</a>
+      <a href="lycees.html">Lycées</a>
+      <a href="colleges.html">Collèges</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 CURSUS BF · Guide éducatif du Burkina Faso</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ══ MODAL DÉTAILS ════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-container">
+    <button class="modal-close" onclick="closeDetails()">&times;</button>
+    <div class="modal-body" id="modal-content-body">
+      <!-- Rempli par JS -->
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/ratings.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function applyFilters() {
+    const opts = FiltersManager.collectFilters();
+    const sortBy = document.getElementById('sort-by')?.value || 'nom_asc';
+    let results = FiltersManager.filterUniversites(window.CURSUS_DATA.universites, opts);
+    results = FiltersManager.sortEtablissements(results, sortBy);
+    const container = document.getElementById('cards-container');
+    renderCards(container, results, renderUniversiteCard);
+    updateResultsCount(results.length, window.CURSUS_DATA.universites.length);
+  }
+
+  function initPage() {
+    FiltersManager.initPriceSlider('filter-prix');
+    FiltersManager.bindFilterEvents(applyFilters);
+    // Récupérer la recherche depuis l'URL si redirigé depuis accueil
+    const q = getUrlParam('q');
+    if (q) {
+      const searchEl = document.getElementById('search-input');
+      if (searchEl) searchEl.value = q;
+    }
+    applyFilters();
+  }
+</script>
+</body>
+</html>
