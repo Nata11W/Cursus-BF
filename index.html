@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CURSUS BF – Trouvez le Meilleur Établissement au Burkina Faso</title>
+  <meta name="description" content="CURSUS BF vous aide à choisir la meilleure université, lycée ou collège au Burkina Faso. Comparez, filtrez et notez les établissements de Ouagadougou." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ═══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">C</div>
+      <div class="brand-text">
+        <span class="brand-name">CURSUS BF</span>
+        <span class="brand-sub">Guide éducatif</span>
+      </div>
+    </a>
+
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link active"><span class="nav-icon"></span> Accueil</a></li>
+      <li><a href="universites.html" class="nav-link"><span class="nav-icon"></span> Universités</a></li>
+      <li><a href="lycees.html" class="nav-link"><span class="nav-icon"></span> Lycées</a></li>
+      <li><a href="colleges.html" class="nav-link"><span class="nav-icon"></span> Collèges</a></li>
+    </ul>
+
+    <div class="navbar-actions">
+      <a href="contact.html" class="btn-whatsapp" id="nav-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Contact
+      </a>
+    </div>
+
+    <button class="navbar-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="navbar-menu" id="nav-menu">
+    <div class="navbar-menu-inner">
+      <a href="index.html" class="mobile-nav-link active"> Accueil</a>
+      <a href="universites.html" class="mobile-nav-link"> Universités</a>
+      <a href="lycees.html" class="mobile-nav-link"> Lycées</a>
+      <a href="colleges.html" class="mobile-nav-link"> Collèges</a>
+      <a href="contact.html" class="mobile-nav-link btn-whatsapp mobile-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Nous contacter
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ PAGE WRAPPER ══════════════════════════════════════ -->
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Gauche -->
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span>
+            Burkina Faso · Guide Éducatif Officiel
+          </div>
+
+          <h1 class="hero-title">
+            Trouvez <span class="gold-text">l'Établissement</span>
+            <span class="outline-text">Parfait</span>
+          </h1>
+
+          <p class="hero-description">
+            CURSUS BF vous accompagne dans le choix de votre université, lycée ou collège.
+            Comparez les filières, les prix et les avis pour prendre la meilleure décision.
+          </p>
+
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <span class="stat-value">30+</span>
+              <span class="stat-label">Établissements</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value" style="color:var(--text-primary)">100%</span>
+              <span class="stat-label">Gratuit</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Catégories</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="universites.html" class="btn btn-gold"> Universités</a>
+            <a href="lycees.html" class="btn btn-outline"> Lycées</a>
+            <a href="colleges.html" class="btn btn-ghost"> Collèges</a>
+          </div>
+
+          <!-- Search -->
+          <div class="hero-search">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="hero-search-input"
+              placeholder="Rechercher un établissement, une filière..."
+              autocomplete="off"
+            />
+            <button class="search-btn" id="hero-search-btn">Rechercher</button>
+          </div>
+        </div>
+
+        <!-- Droite – Match Card -->
+        <div class="hero-right">
+          <div class="match-card">
+            <div class="match-card-header">
+              <h3>🏆 Match Parfait</h3>
+              <div>
+                <div class="match-percentage">97 <span>%</span></div>
+              </div>
+            </div>
+
+            <p class="match-school-name">Université Joseph Ki-Zerbo</p>
+            <p class="match-school-type">📍 Gounghin, Ouagadougou · Publique</p>
+
+            <div class="match-badges">
+              <span class="match-badge">🎓 LMD</span>
+              <span class="match-badge">💰 Accessible</span>
+              <span class="match-badge">✅ CAMES</span>
+              <span class="match-badge">📚 Multi-filières</span>
+            </div>
+
+            <div class="match-divider"></div>
+
+            <div class="match-stats-grid">
+              <div class="match-stat-item">
+                <div class="stat-icon">💰</div>
+                <div class="stat-val">20 000 FCFA</div>
+                <div class="stat-lbl">À partir de</div>
+              </div>
+              <div class="match-stat-item">
+                <div class="stat-icon">📋</div>
+                <div class="stat-val">LMD</div>
+                <div class="stat-lbl">Système</div>
+              </div>
+              <div class="match-stat-item">
+                <div class="stat-icon">🏛️</div>
+                <div class="stat-val">Public</div>
+                <div class="stat-lbl">Type</div>
+              </div>
+              <div class="match-stat-item">
+                <div class="stat-icon">📅</div>
+                <div class="stat-val">1974</div>
+                <div class="stat-lbl">Fondée</div>
+              </div>
+            </div>
+
+            <div class="match-divider"></div>
+            <a href="universites.html" class="btn btn-gold" style="width:100%; justify-content:center; margin-top:8px;">
+              Voir toutes les universités →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>Explorez nos <span>Catégories</span></h2>
+        <p>Choisissez la catégorie d'établissement qui correspond à votre niveau d'études</p>
+      </div>
+
+      <div class="categories-grid">
+        <a href="universites.html" class="category-card fade-in-up">
+          <div class="category-icon"></div>
+          <h3>Universités</h3>
+          <p>Licences, Masters, BTS, MBA et doctorats dans les meilleures universités publiques et privées de Ouagadougou.</p>
+          <span class="category-count">📊 10 établissements</span>
+          <span class="category-arrow">↗</span>
+        </a>
+
+        <a href="lycees.html" class="category-card fade-in-up" style="animation-delay:0.1s">
+          <div class="category-icon"></div>
+          <h3>Lycées</h3>
+          <p>Séries générales, techniques et professionnelles. Préparez le BAC dans les meilleurs lycées du Burkina Faso.</p>
+          <span class="category-count">📊 10 établissements</span>
+          <span class="category-arrow">↗</span>
+        </a>
+
+        <a href="colleges.html" class="category-card fade-in-up" style="animation-delay:0.2s">
+          <div class="category-icon"></div>
+          <h3>Collèges</h3>
+          <p>Du 6ème au 3ème, trouvez le collège idéal pour préparer le BEPC avec un encadrement de qualité.</p>
+          <span class="category-count">📊 10 établissements</span>
+          <span class="category-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="footer-brand">CURSUS BF</p>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="universites.html">Universités</a>
+      <a href="lycees.html">Lycées</a>
+      <a href="colleges.html">Collèges</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 CURSUS BF · Guide éducatif du Burkina Faso</p>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ══ MODAL DÉTAILS ════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-container">
+    <button class="modal-close" onclick="closeDetails()">&times;</button>
+    <div class="modal-body" id="modal-content-body">
+      <!-- Rempli par JS -->
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/ratings.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
